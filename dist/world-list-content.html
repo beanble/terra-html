@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="font-inter">
+  <head>
+    <!-- Page Title -->
+    <title>Terra | World List Content</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Tailwind CDN & Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="w-full min-h-screen bg-zinc-900">
+    <div
+      class="flex items-start justify-center min-h-screen size-full shrink-0"
+    >
+      <!-- Start of World List Primary Content Container -->
+      <div
+        class="flex flex-col items-center justify-center py-8 size-full bg-zinc-900 shrink-0 gap-y-8"
+      >
+        <!-- World Content Column | Displays unlimited columns of content -->
+        <div class="world-content-column w-[90%] h-full flex flex-col gap-8">
+          <!-- Start World Content Row | Displays a maximum of 3 cards per row -->
+          <div class="flex flex-row w-full world-content-row gap-x-8"></div>
+          <!-- End of World Content Row -->
+        </div>
+        <!-- End of World Content Column -->
+      </div>
+      <!-- End of World List Secondary Content Container -->
+    </div>
+  </body>
+</html>
