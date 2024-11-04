@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="font-inter">
+  <head>
+    <!-- Page Title -->
+    <title>Terra | World Load Opening Screen</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Tailwind CDN & Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="w-full min-h-screen bg-zinc-900">
+    <!-- Start World Load Opening Screen Container -->
+    <div
+      class="flex items-center justify-center min-h-screen world-loading-screen bg-zinc-950 size-full shrink-0"
+    >
+      <div class="text-center">
+        <div class="mb-8 text-sm font-medium text-white">Loading world...</div>
+        <div class="w-72 bg-gray-700 rounded-full h-1.5 overflow-hidden">
+          <!-- Loading Bar -->
+          <div class="h-1 bg-white loading-bar" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+    <!-- End of World Load Opening Screen Container -->
+  </body>
+</html>
