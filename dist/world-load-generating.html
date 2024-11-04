@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="font-inter">
+  <head>
+    <!-- Page Title -->
+    <title>Terra | World Load Generating Screen</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Tailwind CDN & Stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="w-full min-h-screen bg-zinc-900">
+    <!-- Start World Load Generating Screen Container -->
+    <div
+      class="flex items-center justify-center min-h-screen world-generating-screen bg-zinc-950 size-full shrink-0"
+    >
+      <div class="text-center">
+        <div class="mb-8 text-sm font-medium text-white">
+          Generating world...
+        </div>
+        <div class="w-72 bg-gray-700 rounded-full h-1.5 overflow-hidden">
+          <!-- Loading Bar -->
+          <div class="h-1 bg-white loading-bar" style="width: 0%"></div>
+        </div>
+        <div class="mt-8 text-sm font-normal text-white">
+          Estimated time:
+          <span class="minutes-countdown-generation">#</span> minutes,
+          <span class="seconds-countdown-generation">#</span>
+          seconds
+        </div>
+      </div>
+      <!-- Loading Animation -->
+      <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+          let progress = 0;
+          const loadingBar = document.getElementsByClassName("loading-bar")[0];
+
+          function animateLoading() {
+            if (progress <= 100) {
+              loadingBar.style.width = `${progress}%`;
+              progress++;
+              setTimeout(animateLoading, 50);
+            }
+          }
+
+          setTimeout(animateLoading, 100);
+        });
+      </script>
+    </div>
+    <!-- End of World Load Generating Screen Container -->
+  </body>
+</html>
